@@ -13,6 +13,7 @@ body{
     ;
 }
 
+/* Sidebar Section */
 .sidebar{
     grid-area: sidebar;
     background-color: #1992d4;
@@ -35,15 +36,19 @@ body{
     cursor: pointer;
 }
 
+
+/* Header section */
 .topbar{
     grid-area: topbar;
     padding: 10px;
 }
 
+
+/* Main Content section */
 .content{
     grid-area: main;
     background-color: #e2e8f0;
-    padding: 10px;
+    padding: 20px;
 
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -53,11 +58,16 @@ body{
     "projects trending";
 }
 
+.content-yourProjects,.content-announcements, .content-trending{
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+/* Main Content section - Your Projects */
 .content-yourProjects{
     grid-area: projects;
 
-    display: grid;
-    grid-template-rows: auto 1fr;
+
 }
 
 .content-yourProjects-cardGrid{
@@ -75,11 +85,47 @@ body{
     box-shadow: 10px 10px;
 }
 
+
+/* Main Content section - announcements */
+
 .content-announcements{
     grid-area: announcements;
 
 }
 
+
+/* Main Content section - Trendings */
+
 .content-trending{
     grid-area: trending;
+}
+
+.content-trending-grid{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+}
+
+.trending-item{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "img title"
+        "img desc";
+}
+
+.trending-img{
+    grid-area: img;
+}
+
+.trending-title{
+    grid-area: title;
+}
+
+.trending-desc{
+    grid-area: desc;
+}
+
+.content-trending *{
+    margin: 0;
 }
