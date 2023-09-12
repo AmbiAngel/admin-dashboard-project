@@ -5,8 +5,8 @@ body{
 .layout{
     height: 100vh;
     display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 200px 1fr;
     grid-template-areas: 
         "sidebar topbar"
         "sidebar main"
@@ -15,14 +15,71 @@ body{
 
 .sidebar{
     grid-area: sidebar;
-    background-color: aquamarine;
+    background-color: #1992d4;
+    padding: 10px;
+    padding-right: 40px;
+    color: white;
+
+    
+}
+
+.sidebar > ul {
+    margin: 50px auto;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: repeat(auto-fit, 20px);
+}
+
+.sidebar > ul > li {
+    cursor: pointer;
 }
 
 .topbar{
     grid-area: topbar;
+    padding: 10px;
 }
 
 .content{
     grid-area: main;
+    background-color: #e2e8f0;
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "projects announcements"
+    "projects trending";
 }
 
+.content-yourProjects{
+    grid-area: projects;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.content-yourProjects-cardGrid{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, minmax(350px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.card{
+    background-color: white;
+    /* height: 250px; */
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px;
+}
+
+.content-announcements{
+    grid-area: announcements;
+
+}
+
+.content-trending{
+    grid-area: trending;
+}
