@@ -13,6 +13,7 @@ body{
     ;
 }
 
+
 /* Sidebar Section */
 .sidebar{
     grid-area: sidebar;
@@ -41,6 +42,60 @@ body{
 .topbar{
     grid-area: topbar;
     padding: 10px;
+    display: grid;
+    grid-template: 1fr 2fr / 2fr 1fr;
+    gap: 20px;
+}
+
+.topbar img {
+    border-radius: 90px;
+}
+
+/* Header section - Search area */
+
+.searchForm{
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.searchForm > label {
+    /* flex: 1; */
+}
+
+.searchBar{
+    /* flex:10; */
+    height: fit-content;
+}
+
+/* Header section - Greeting */
+.greeting{
+    display: grid;
+    grid-template: 1fr 2fr/ 1fr 4fr;
+    grid-template-areas: 
+        "pfp greet"
+        "pfp name"
+    ;
+}
+
+.greeting *{
+    margin: 0;
+}
+
+.greeting-img{
+    grid-area: pfp;
+}
+
+.greeting-text{
+    grid-area: greet;
+}
+
+.greeting-name{
+    grid-area: name;
+}
+
+.profileBtns{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 
