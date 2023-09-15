@@ -293,6 +293,7 @@ body{
     
     display: grid;
     grid-template-rows: repeat(4,1fr);
+    gap: 25px;
 }
 
 .trending-item{
@@ -302,25 +303,30 @@ body{
     grid-template-areas: 
         "img title"
         "img desc";
+    gap: 5px;
+    
 }
 
 .trending-img{
     grid-area: img;
-    height: 66px;
 }
 
 .trending-title{
     grid-area: title;
+    align-self: end;
 }
 
 .trending-desc{
     grid-area: desc;
+    align-self: start;
 }
 
 .content-trending *{
     margin: 0;
 }
 
-.trending-img{
-    height: 60px;
+
+.pfp-small, .trending-img{
+    height: 45px;
+    border-radius: 20px;
 }
