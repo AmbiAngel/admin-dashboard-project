@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 *{
-    box-sizing: border-box;
+    box-sizing: content-box;
     font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
 }
@@ -12,6 +12,7 @@ h1, h2, h3, h4, h5, h6{
 
 :root{
     --bg-color: white;
+    --secondary-bg-color: #1992d4;
     --general-box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.432);
 }
 
@@ -38,11 +39,15 @@ body{
     height: 25px;
 }
 
+.svg-smallest{
+    height: 25px;
+}
+
 
 /* Sidebar Section */
 .sidebar{
     grid-area: sidebar;
-    background-color: #1992d4;
+    background-color: var(--secondary-bg-color);
     padding: 10px;
     padding-right: 40px;
     color: white;
@@ -85,9 +90,9 @@ body{
     z-index: 1;
 }
 
-.topbar img {
+.pfp {
     border-radius: 90px;
-    height: 66px;
+    height: 60px;
 }
 
 /* Header section - Search area */
@@ -104,26 +109,30 @@ body{
 }
 
 #searchBar{
-    /* flex:10; */
-    /* height: fit-content; */
     background-color: rgb(194, 194, 194);
     border: none;
     border-radius: 20px;
+    height: 30px;
 }
 
 
 /* Header Section - Profile Buttons */
 .profileBtns{
-    display: grid;
-    grid-template-columns: auto auto 1fr;
-    gap:10px;
+    display: flex;
+    gap:35px;
     align-items: center;
+    justify-content: center;
 }
 
 .profileBtns-alertBtn{
-    
+    border: none;
+    border-radius: 90px;
+    background-color: rgba(128, 128, 128, 0);
 }
 
+.profileBtns-alertBtn:hover{
+    background-color: rgb(216, 216, 216);
+}
 
 /* Header section - Greeting */
 .greeting{
@@ -159,10 +168,22 @@ body{
 
 /* Header section - Action Buttons */
 
-.actionBtns{
+.actionBtnsContainer{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    
+}
+
+.actionBtns{
+    background-color: var(--secondary-bg-color);
+    color: var(--bg-color);
+    font-size: 1.25rem;
+    border-radius: 30px;
+    padding: 10px 30px;
+    border: none;
+    width: 63px;
+
 }
 
 /* Main Content section */
@@ -272,6 +293,6 @@ body{
     margin: 0;
 }
 
-.trending-img, .topbar img{
+.trending-img{
     height: 60px;
 }
