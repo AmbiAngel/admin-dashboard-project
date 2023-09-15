@@ -50,6 +50,10 @@ body{
     
 }
 
+.sidebar h1{
+    align-self: center;
+}
+
 .svg-container{
     display: flex;
     gap: 20px;
@@ -60,6 +64,7 @@ body{
     list-style: none;
     display: grid;
     gap: 30px;
+    padding-left: 20px;
     grid-template-rows: repeat(auto-fit, 20px);
 }
 
