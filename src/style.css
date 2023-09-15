@@ -30,6 +30,14 @@ body{
     ;
 }
 
+.svg-big{
+    height: 60px;
+}
+
+.svg-small{
+    height: 20px;
+}
+
 
 /* Sidebar Section */
 .sidebar{
@@ -40,6 +48,11 @@ body{
     color: white;
 
     
+}
+
+.svg-container{
+    display: flex;
+    gap: 10px;
 }
 
 .sidebar > ul {
