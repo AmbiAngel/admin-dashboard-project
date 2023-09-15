@@ -262,9 +262,21 @@ body{
     box-shadow: var(--general-box-shadow);
 
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr auto 1fr auto 1fr;
+    align-items: center;
+}
+.content-announcements-grid > hr {
+    margin: 10px 0;
 }
 
+.announcement h4{
+    margin-bottom: 5px;
+}
+
+.announcement > p {
+    color: grey;
+    font-size: .8rem;
+}
 
 /* Main Content section - Trendings */
 
