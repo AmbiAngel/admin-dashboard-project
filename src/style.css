@@ -35,7 +35,7 @@ body{
 }
 
 .svg-small{
-    height: 20px;
+    height: 25px;
 }
 
 
@@ -52,14 +52,14 @@ body{
 
 .svg-container{
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 .sidebar > ul {
     margin: 50px auto;
     list-style: none;
     display: grid;
-    gap: 10px;
+    gap: 30px;
     grid-template-rows: repeat(auto-fit, 20px);
 }
 
