@@ -157,10 +157,12 @@ body{
 
 .greeting-text{
     grid-area: greet;
+    align-self: end;
 }
 
 .greeting-name{
     grid-area: name;
+    align-self: start;
 }
 
 
@@ -207,7 +209,7 @@ body{
 }
 
 .content  h3{
-    margin: 0 0 20px 0 ;
+    margin: 0 0 10px 0 ;
 }
 
 /* Main Content section - Your Projects */
@@ -225,13 +227,26 @@ body{
 }
 
 .card{
-    background-color: var(--bg-color, red);
-    /* height: 250px; */
-    padding: 10px;
+    background: linear-gradient(to left, var(--bg-color, red) 98%, orange 20%);
+    padding: 30px;
     border-radius: 20px;
     box-shadow: var(--general-box-shadow);
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
+.card-btnContainer {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.card-btnContainer button {
+    width: 25px;
+    border: none;
+    background-color: rgba(226, 232, 240, 0);
+}
 
 /* Main Content section - announcements */
 
