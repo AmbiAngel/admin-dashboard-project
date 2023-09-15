@@ -65,12 +65,12 @@ body{
 }
 
 .sidebar > ul {
-    margin: 50px auto;
+    margin: 70px auto;
     list-style: none;
     display: grid;
     gap: 30px;
     padding-left: 20px;
-    grid-template-rows: repeat(auto-fit, 20px);
+    grid-template-rows: repeat(6, 20px);
 }
 
 .sidebar > ul > li {
