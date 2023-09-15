@@ -85,10 +85,14 @@ body{
     /* flex: 1; */
 }
 
-.searchBar{
+#searchBar{
     /* flex:10; */
     /* height: fit-content; */
+    background-color: rgb(194, 194, 194);
+    border: none;
+    border-radius: 20px;
 }
+
 
 /* Header Section - Profile Buttons */
 .profileBtns{
